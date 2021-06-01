@@ -1,0 +1,9 @@
+BROKER_URL = 'amqp://root:optimus@localhost:1234/db_refresh'
+# BROKER_URL = 'amqp://root:123shiwodemima@10.0.0.140:5672/celery'
+CELERY_RESULT_BACKEND = 'redis://:optimus@localhost:6379/15'
+# CELERY_RESULT_BACKEND = 'redis://:123shiwodemima@100.98.97.86:6379/15'
+CELERY_TASK_SERIALIZER = 'msgpack'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_RESULT_EXPIRES = 60 * 60 * 24
+CELERY_ACCEPT_CONTENT = ['json', 'msgpack']
+BROKER_CONNECTION_TIMEOUT = 1
